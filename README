@@ -1,0 +1,10 @@
+Project requires:
+
+- Junction for iPhone (http://github.com/OpenJunction/iPhoneJunction)
+
+- GData (http://code.google.com/apis/gdata/)
+
+- ASIHTTPRequest (http://allseeing-i.com/ASIHTTPRequest/)
+
+- ZXing (http://code.google.com/p/zxing/)
+
