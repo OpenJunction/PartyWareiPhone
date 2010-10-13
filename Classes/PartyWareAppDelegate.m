@@ -84,10 +84,15 @@ CGFloat const JPEG_COMPRESSION_QUALITY = 0.5;
 	NSString *savePath = [[savePaths objectAtIndex:0] stringByAppendingString:@"/partyData"];
 	NSString *partyData = [NSString stringWithContentsOfFile:savePath encoding:NSUTF8StringEncoding error:NULL];
 	NSArray *partyComponents = [partyData componentsSeparatedByString:@" "];
-	if (![[partyComponents objectAtIndex:0] isEqualToString:@"(null)"]) {
-		joinViewController.lastPartyURL = [NSURL URLWithString:[partyComponents objectAtIndex:0]];
-		joinViewController.lastPartyName = [partyComponents objectAtIndex:1];
-	}
+	
+	// TODO - Disabling this for demo - re-enable for realistic experience.
+	//if (![[partyComponents objectAtIndex:0] isEqualToString:@"(null)"]) {
+	//	joinViewController.lastPartyURL = [NSURL URLWithString:[partyComponents objectAtIndex:0]];
+	//	joinViewController.lastPartyName = [partyComponents objectAtIndex:1];
+	//}
+	// Hard-coding this for demo.
+	joinViewController.lastPartyURL = [NSURL URLWithString: @"junction://openjunction.org/partyware_session"];
+	joinViewController.lastPartyName = @"Best Party Ever";
 	
     // Override point for customization after application launch.
 	[window addSubview:tabBarController.view];

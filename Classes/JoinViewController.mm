@@ -105,8 +105,9 @@
 
 - (void)joinPartyWithURL:(NSURL *)url {
 	self.invitationURL = url;
+	NSString *msg = [NSString stringWithFormat: @"..connecting to %@", lastPartyURL];
 	[UIAlertView showActivityAlertViewWithTitle:@"Joining party"
-										message:@"Please wait..."
+										message: msg
 									   delegate:self];
 }
 
